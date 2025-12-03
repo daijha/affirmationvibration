@@ -1,8 +1,35 @@
+import React, { useEffect } from "react";
+{
+  /* useEffect is used to get the page to react after the state is updated */
+}
 
+import { useState } from "react";
+{
+  /*updates the state of variables */
+}
 
 import "../App.css";
 
 function Affirmations() {
+  const [mood, setMood] = useState("");
+
+  useEffect(() =>{
+      async function getAffs(mood) {
+         try {
+        const response = await fetch(`http://localhost:3000/api/${mood}`);
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+      console.log(error);
+    }
+}
+     if (mood){
+ getAffs();
+    }
+  }, [mood]);
+
+
+
   return (
     <div>
       <p>
@@ -11,8 +38,11 @@ function Affirmations() {
       </p>
       <h2>How are you feeling?</h2>
       <h3>Select your mood</h3>
-      <select>
-        <option value="">select your mood here</option> {/*option tag is for each item in dropdown. needs attribute value to specify data sent*/}
+      <select onChange={(e)=> setMood(e.target.value)}>
+        { /* when the dropdown is selected react gives a event object. inside that object is a property called target.value which gives the value selected. onchange sets the selection when it changes*/}
+
+        <option value="">select your mood here</option>{" "}
+        {/*option tag is for each item in dropdown. needs attribute value to specify data sent*/}
         <option value="shame">Shame</option>
         <option value="guilt">Guilt</option>
         <option value="apathy">Apathy</option>
@@ -31,7 +61,7 @@ function Affirmations() {
         <option value="peace">Peace</option>
         <option value="enlightenment">Enlightenment</option>
       </select>
-      {/*reminder: this is the tag 4 dropdown */}
+      {/*reminder: select is the tag 4 dropdown */}
     </div>
   );
 }
