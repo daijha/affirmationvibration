@@ -11,13 +11,15 @@ import "../App.css";
 
 function Affirmations() {
   const [mood, setMood] = useState("");
-
+  const [affs, setAffs] = useState({})
   useEffect(() =>{
+    // fetching the affs from the backend 
       async function getAffs(mood) {
          try {
         const response = await fetch(`http://localhost:3000/api/${mood}`);
         const data = await response.json();
         console.log(data);
+        setAffs(data);
       } catch (error) {
       console.log(error);
     }
@@ -29,7 +31,8 @@ function Affirmations() {
     }
   }, [mood]);
 
-
+  console.log("affs state:", affs);
+    console.log("affirmations array:" , affs.affirmations);
 
   return (
     <div>
@@ -63,6 +66,15 @@ function Affirmations() {
         <option value="enlightenment">Enlightenment</option>
       </select>
       {/*reminder: select is the tag 4 dropdown */}
+      <div className="displaybox">
+        <p>test</p>
+      {(affs.affirmations)
+       ? <ul>
+              {affs.affirmations.map(item => <li key={item}>{item}</li>)}
+        </ul>
+      : <p>affirmations not available.</p>
+        }
+      </div>
     </div>
   );
 }

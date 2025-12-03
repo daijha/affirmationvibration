@@ -5,3 +5,9 @@ color:blueviolet;
 h1{
     color:green;
 }
+.displaybox{
+    background-color: aquamarine;
+    border:1px solid blue;
+    height: 100px;
+    width: 200px;
+}
