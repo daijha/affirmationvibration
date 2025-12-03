@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-{
+
   /* useEffect is used to get the page to react after the state is updated */
-}
+
 
 import { useState } from "react";
-{
+
   /*updates the state of variables */
-}
 
 import "../App.css";
 
@@ -24,7 +23,9 @@ function Affirmations() {
     }
 }
      if (mood){
- getAffs();
+         console.log("mood selected:", mood);
+ getAffs(mood);
+
     }
   }, [mood]);
 
