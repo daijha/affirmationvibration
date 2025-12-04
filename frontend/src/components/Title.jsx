@@ -2,7 +2,7 @@ import "../App.css";
 function Title (){
     return(
         <div>
-            <h1>Tester Title</h1>
+            <h1>Affirmation Vibration</h1>
         </div>
     )
 
