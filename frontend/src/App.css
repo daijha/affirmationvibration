@@ -1,13 +1,71 @@
 p {
-color:blueviolet;
+  color:#000000;
 }
 
-h1{
-    color:green;
+h1 {
+  color: green;
 }
-.displaybox{
-    background-color: aquamarine;
-    border:1px solid blue;
-    height: 250px;
-    width: 400px;
+.page {
+  text-align: center;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.displaybox {
+  background-color: #FFFFF0;
+  border: 1px solid blue;
+  height: 250px;
+  width: 400px;
+}
+.shame-bg {
+  background-color: #800000;
+}
+.guilt-bg {
+  background-color: #8b0000;
+}
+.apathy-bg {
+  background-color: #a52a2a;
+}
+.grief-bg {
+  background-color: #b22222;
+}
+.fear-bg {
+  background-color: #dc143c;
+}
+.desire-bg {
+  background-color: #ff4500;
+}
+.anger-bg {
+  background-color: #ff6347;
+}
+.pride-bg {
+  background-color: #ff8c00;
+}
+.courage-bg {
+  background-color: #ffa500;
+}
+.neutrality-bg {
+  background-color: #ffd700;
+}
+.willingness-bg {
+  background-color: #ffff00;
+}
+.acceptance-bg {
+  background-color: #adff2f;
+}
+.reason-bg {
+  background-color: #00ff7f;
+}
+.love-bg {
+  background-color: #00fa9a;
+}
+.joy-bg {
+  background-color: #00ced1;
+}
+.peace-bg {
+  background-image: linear-gradient(to bottom, #1e90ff, #9370db);
+}
+.enlightenment-bg {
+  background-image: linear-gradient(to bottom, #9370db, #ffffff);
 }

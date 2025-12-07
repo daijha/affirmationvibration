@@ -8,8 +8,8 @@ import { useState } from "react";
 
 import "../App.css";
 
-function Affirmations() {
-  const [mood, setMood] = useState("");
+function Affirmations({mood, setMood}) {
+  // not needed if takes props: const [mood, setMood] = useState("");
   const [affs, setAffs] = useState({});
   useEffect(() => {
     // fetching the affs from the backend
@@ -33,7 +33,7 @@ function Affirmations() {
   console.log("affirmations array:", affs.affirmations);
 
   return (
-    <div>
+    <div > {/*have to use curly braces for the template literal */}
      
       <h2>How are you feeling?</h2>
       <h3>Select your mood</h3>
