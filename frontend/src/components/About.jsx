@@ -2,7 +2,7 @@ import "../App.css";
 
 function About() {
   return (
-    <div>
+    <div className="about">
       <h1>Inspired by David R. Hawkins</h1>
       <p>
         David R. Hawkins was an American psychologist widely recognized in

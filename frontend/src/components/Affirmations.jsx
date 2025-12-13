@@ -8,8 +8,8 @@ import { useState } from "react";
 
 import "../App.css";
 
-function Affirmations({mood, setMood}) {
-  // not needed if takes props: const [mood, setMood] = useState("");
+function Affirmations() {
+  const [mood, setMood] = useState("");
   const [affs, setAffs] = useState({});
   useEffect(() => {
     // fetching the affs from the backend
@@ -33,10 +33,10 @@ function Affirmations({mood, setMood}) {
   console.log("affirmations array:", affs.affirmations);
 
   return (
-    <div > {/*have to use curly braces for the template literal */}
+    <div className= {`start ${mood}-bg`} > {/*have to use curly braces for the template literal */}
      
-      <h2>How are you feeling?</h2>
-      <h3>Select your mood</h3>
+      <h1>How are you feeling?</h1>
+      {/* <h3>Select your mood</h3> */}
       <select onChange={(e) => setMood(e.target.value)}>
         {/* when the dropdown is selected react gives a event object. inside that object is a property called target.value which gives the value selected. onchange sets the selection when it changes*/}
         <option value="">select your mood here</option>{" "}
