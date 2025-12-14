@@ -1,14 +1,8 @@
-p {
-  /* color: #000000; */
-}
-
-h1 {
-  /* color: #000000; */
-
-}
 .page {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh; /* use min to get rid of the scrollbars */
+  min-width: 100vw;
+  color: #f5f5f5;
+
   text-align: center;
   border-radius: 8px;
   background-image: radial-gradient(
@@ -23,89 +17,120 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.title {
+  padding: 50px;
+  font-size: 1.5rem;
+}
+
 .pageInner {
   width: 90%;
   display: flex;
   justify-content: space-evenly;
-  /* border: 2px solid white; */
   margin: 0 auto;
 }
 .about {
-  /* border: 1px solid green; */
-  color:white;
   background-color: #06030378;
-  padding:20px;
+  padding: 20px;
   border-radius: 12px;
   width: 40%;
 }
 .start {
-  border: 1px solid orange;
+  background-color: #06030378;
   border-radius: 12px;
-    padding:20px;
+  padding: 20px;
   width: 40%;
   align-items: center;
 }
-.displaybox {
-  background-color: #fffff0;
-  border: 1px solid blue;
-  border-radius: 12px;
-  width: 50%;
-  margin: 0 auto;
-  padding: 20px;;
+select {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  background-color: #060303c2;
+  color: white;
+
+  text-align: center;
+  font-size: large;
+
+  border-radius: 8px;
 }
-ul{
-    list-style-type: none;
-text-align: left;
+.displaybox {
+  background-color: #060303c2;
+  border-radius: 12px;
+  width: 72%;
+  margin: 0 auto;
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: large;
 }
 /*add transitions to each one*/
+.select-bg {
+  background-color: #060303c2;
+}
 .shame-bg {
-  background-image: linear-gradient(to bottom, #ff000049, #ffffff);
+  background-color:#800000;
 }
 .guilt-bg {
-  background-image: linear-gradient(to bottom, #ef500b42, #ffffff);
+  background-color:#8B0000
+;
 }
 .apathy-bg {
-  background-image: linear-gradient(to bottom, #f893105b, #ffffff);
+  background-color:#A52A2A;
 }
 .grief-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#B22222;
 }
 .fear-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#DC143C;
 }
 .desire-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#FF4500;
 }
 .anger-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#FF6347;
 }
 .pride-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#FF8C00;
 }
 .courage-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#FFA500;
+
 }
-.neutrality-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
-}
+  .neutrality-bg {
+  background-color:#FFD700;
+  }
+
 .willingness-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#FFFF00;
 }
 .acceptance-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#ADFF2F;
 }
 .reason-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#00FF7F;
 }
 .love-bg {
-  background-image: linear-gradient(to bottom, #00fa9a, #00ced1);
+  background-color:#00FA9A;
 }
 .joy-bg {
-  background-image: linear-gradient(to bottom, #00ced1, #1e90ff);
+  background-color:#00CED1;
 }
 .peace-bg {
-  background-image: linear-gradient(to bottom, #90c4f7, #b28cfd);
+  background-color:#1E90FF;
 }
 .enlightenment-bg {
-  background-image: linear-gradient(to bottom, #b28cfd, #ffffff);
+  background-color:#9370DB;
+}
+.fade{
+    transition: background-color 1s ease-in-out;
+
+}
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 0;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }
