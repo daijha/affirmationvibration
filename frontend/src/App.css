@@ -43,7 +43,7 @@
 }
 select {
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   width: 80%;
   background-color: #060303c2;
   color: white;
@@ -54,6 +54,7 @@ select {
   border-radius: 8px;
 }
 .displaybox {
+  /* border:4px solid yellow; */
   background-color: #060303c2;
   border-radius: 12px;
   width: 72%;
@@ -67,64 +68,63 @@ ul {
 }
 /*add transitions to each one*/
 .select-bg {
-  background-color: #060303c2;
+  box-shadow: 0 0 20px 2px  #060303c2;
 }
 .shame-bg {
-  background-color:#800000;
+  box-shadow: 0 0 20px 2px #800000;
 }
 .guilt-bg {
-  background-color:#8B0000
-;
+   box-shadow: 0 0 20px 2px #8B0000;
 }
 .apathy-bg {
-  background-color:#A52A2A;
+   box-shadow: 0 0 20px 2px #A52A2A;
 }
 .grief-bg {
-  background-color:#B22222;
+   box-shadow: 0 0 20px 2px #B22222;
 }
 .fear-bg {
-  background-color:#DC143C;
+ box-shadow: 0 0 20px 2px #DC143C;
 }
 .desire-bg {
-  background-color:#FF4500;
+   box-shadow: 0 0 20px 2px #FF4500;
 }
 .anger-bg {
-  background-color:#FF6347;
+   box-shadow: 0 0 20px 2px #FF6347;
 }
 .pride-bg {
-  background-color:#FF8C00;
+   box-shadow: 0 0 20px 2px #FF8C00;
 }
 .courage-bg {
-  background-color:#FFA500;
+   box-shadow: 0 0 20px 2px #FFA500;
 
 }
   .neutrality-bg {
-  background-color:#FFD700;
+   box-shadow: 0 0 20px 2px #FFD700;
   }
 
 .willingness-bg {
-  background-color:#FFFF00;
+   box-shadow: 0 0 20px 2px #FFFF00;
 }
 .acceptance-bg {
-  background-color:#ADFF2F;
+   box-shadow: 0 0 20px 2px #ADFF2F;
 }
 .reason-bg {
-  background-color:#00FF7F;
+   box-shadow: 0 0 20px 2px #00FF7F;
 }
 .love-bg {
-  background-color:#00FA9A;
+   box-shadow: 0 0 20px 2px #00FA9A;
 }
 .joy-bg {
-  background-color:#00CED1;
+   box-shadow: 0 0 20px 2px #00CED1;
 }
 .peace-bg {
-  background-color:#1E90FF;
+   box-shadow: 0 0 20px 2px #1E90FF;
 }
 .enlightenment-bg {
-  background-color:#9370DB;
+   box-shadow: 0 0 20px 2px #9370DB;
 }
 .fade{
-    transition: background-color 1s ease-in-out;
+    transition: box-shadow 1s ease-in-out;
 
 }
 h1 {

@@ -2,7 +2,7 @@ import "../App.css";
 
 function About() {
   return (
-    <div className="about">
+    <div className={`about `}> {/*possibly  add the box shadow here  */}
       <h1>Inspired by David R. Hawkins</h1>
       <p>
         David R. Hawkins was an American psychologist widely recognized in
@@ -15,12 +15,16 @@ function About() {
         elevate their vibration toward higher states of consciousness,
         ultimately approaching the lightness of Enlightenment. <br /> <br /> If
         this resonates with you, consider exploring Hawkins’ writings further to
-        deepen your understanding. <br /> <br /> Affirmations are powerful tools
-        for reshaping the mind, reprogramming emotional patterns, and
-        influencing how we feel physically. To gain the most benefit, repeat
-        them often, embody their meaning, and allow the words to transform your
-        inner state. As your vibration rises, you may notice your body feeling
-        lighter, more peaceful, and at ease.
+        deepen your understanding.{" "}
+      </p>
+      <h1>How to use this app</h1>
+      <br />
+      <p>
+        Affirmations are powerful tools for reshaping the mind, reprogramming
+        emotional patterns, and influencing how we feel physically. To gain the
+        most benefit, repeat them often, embody their meaning, and allow the
+        words to transform your inner state. As your vibration rises, you may
+        notice your body feeling lighter, more peaceful, and at ease.
       </p>
     </div>
   );

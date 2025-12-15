@@ -33,10 +33,10 @@ function Affirmations() {
   console.log("affirmations array:", affs.affirmations);
 
   return (
-    <div className= {`start fade ${mood}-bg`} > {/*have to use curly braces for the template literal */}
+    <div className= {`start fade ${mood}-bg` } > {/*have to use curly braces for the template literal */}
      
-      <h1>How are you feeling?</h1>
-      {/* <h3>Select your mood</h3> */}
+      <h1>{mood ? `Affirmations for ${mood}`:"How are you feeling?"}</h1>
+     
       <select onChange={(e) => setMood(e.target.value)}>
         {/* when the dropdown is selected react gives a event object. inside that object is a property called target.value which gives the value selected. onchange sets the selection when it changes*/}
         <option value="select">select your mood here</option>{" "}
