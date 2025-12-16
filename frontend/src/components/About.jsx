@@ -17,10 +17,10 @@ function About() {
         this resonates with you, consider exploring Hawkins’ writings further to
         deepen your understanding.{" "}
       </p>
-      <h1>How to use this app</h1>
+      <h1>Usage of Affirmations</h1>
       <br />
       <p>
-        Affirmations are powerful tools for reshaping the mind, reprogramming
+        Affirmations are a powerful tool for reshaping the mind, reprogramming
         emotional patterns, and influencing how we feel physically. To gain the
         most benefit, repeat them often, embody their meaning, and allow the
         words to transform your inner state. As your vibration rises, you may

@@ -8,8 +8,8 @@ import { useState } from "react";
 
 import "../App.css";
 
-function Affirmations() {
-  const [mood, setMood] = useState("");
+function Affirmations({mood, setMood}) {
+  // const [mood, setMood] = useState("");
   const [affs, setAffs] = useState({});
   useEffect(() => {
     // fetching the affs from the backend
@@ -39,7 +39,7 @@ function Affirmations() {
      
       <select onChange={(e) => setMood(e.target.value)}>
         {/* when the dropdown is selected react gives a event object. inside that object is a property called target.value which gives the value selected. onchange sets the selection when it changes*/}
-        <option value="select">select your mood here</option>{" "}
+        <option value="">select your mood here</option>{" "}
         {/*option tag is for each item in dropdown. needs attribute value to specify data sent*/}
         <option value="shame">Shame</option>
         <option value="guilt">Guilt</option>
@@ -68,7 +68,8 @@ function Affirmations() {
             ))}
           </ul>
         ) : (
-          <p>Affirmations will appear here.</p>
+          <p className="move">Affirmations will appear here. <br/> <br/>
+      Select a mood from the dropdown menu to start resonating higher.</p>
         )}
       </div>
     </div>
