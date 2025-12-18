@@ -8,9 +8,10 @@ import { useState } from "react";
 
 import "../App.css";
 
-function Affirmations({mood, setMood}) {
+function Affirmations({ mood, setMood }) {
   // const [mood, setMood] = useState("");
   const [affs, setAffs] = useState({});
+  const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     // fetching the affs from the backend
     async function getAffs(mood) {
@@ -33,11 +34,21 @@ function Affirmations({mood, setMood}) {
   console.log("affirmations array:", affs.affirmations);
 
   return (
-    <div className= {`start fade ${mood}-bg` } > {/*have to use curly braces for the template literal */}
-     
-      <h1>{mood ? `Affirmations for ${mood}`:"How are you feeling?"}</h1>
-     
-      <select onChange={(e) => setMood(e.target.value)}>
+    <div className={`start fade ${mood}-bg`}>
+      {/*have to use curly braces for the template literal */}
+      <h1 className={isVisible ? "letterfade visible" : "letterfade hidden"}>
+        {mood ? `Affirmations for ${mood}` : "How are you feeling?"}
+      </h1>
+      
+      <select
+        onChange={(e) => {
+          setIsVisible(false);
+          setTimeout(() => {
+            setMood(e.target.value);
+            setIsVisible(true);
+          }, 800);
+        }}
+      >
         {/* when the dropdown is selected react gives a event object. inside that object is a property called target.value which gives the value selected. onchange sets the selection when it changes*/}
         <option value="">select your mood here</option>{" "}
         {/*option tag is for each item in dropdown. needs attribute value to specify data sent*/}
@@ -62,14 +73,16 @@ function Affirmations({mood, setMood}) {
       {/*reminder: select is the tag 4 dropdown */}
       <div className="displaybox">
         {affs.affirmations ? (
-          <ul>
+          <ul className={isVisible ? "letterfade visible" : "letterfade hidden"}>
             {affs.affirmations.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item} >{item}</li>
             ))}
           </ul>
         ) : (
-          <p className="move">Affirmations will appear here. <br/> <br/>
-      Select a mood from the dropdown menu to start resonating higher.</p>
+          <p className="move">
+            Affirmations will appear here. <br /> <br />
+            Select a mood from the dropdown menu to start resonating higher.
+          </p>
         )}
       </div>
     </div>

@@ -77,6 +77,18 @@ ul {
   text-align: left;
   font-size: large;
 }
+/*to get the wording to transition smoothly when dropdown changes*/
+.letterfade{
+  transition: opacity .8s ease-in-out;
+}
+.visible{
+  opacity:1;
+}
+.hidden{
+  opacity:0;
+}
+
+
 /*add transitions to each one*/
 .-bg {
   box-shadow: 0 0 20px 2px  #060303c2;
@@ -135,7 +147,7 @@ ul {
    box-shadow: 0 0 20px 2px #9370DB;
 }
 .fade{
-    transition: box-shadow 1s ease-in-out;
+    transition: box-shadow .8s ease-in-out;
 
 }
 
