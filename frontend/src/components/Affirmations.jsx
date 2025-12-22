@@ -36,9 +36,9 @@ function Affirmations({ mood, setMood }) {
   return (
     <div className={`start fade ${mood}-bg`}>
       {/*have to use curly braces for the template literal */}
-      <h1 className={isVisible ? "letterfade visible" : "letterfade hidden"}>
+      <h2 className={isVisible ? "letterfade visible" : "letterfade hidden"}>
         {mood ? `Affirmations for ${mood}` : "How are you feeling?"}
-      </h1>
+      </h2>
       
       <select
         onChange={(e) => {

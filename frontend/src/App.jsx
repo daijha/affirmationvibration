@@ -11,7 +11,7 @@ function App() {
     <div className={`page fade ${mood}-bg`}> {/* divs can have more that 1 classname */}
       <Title/>
       <div className="pageInner">
-         <About/>
+         <About mood={mood} setMood= {setMood}/>
       <Affirmations mood={mood} setMood= {setMood} />
       </div>
      

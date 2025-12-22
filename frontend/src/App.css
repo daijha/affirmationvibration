@@ -1,9 +1,12 @@
-html, body, #root { /* the containers that house app.jsx*/
+html,
+body,
+#root {
+  /* the containers that house app.jsx*/
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color:#333333; /* sets the whole page background */
-  display:flex;
+  background-color: #333333; /* sets the whole page background */
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -26,7 +29,7 @@ html, body, #root { /* the containers that house app.jsx*/
   align-items: center;
 }
 .title {
-  padding: 30px;
+  padding: 15px;
   font-size: 1.5rem;
 }
 
@@ -38,10 +41,32 @@ html, body, #root { /* the containers that house app.jsx*/
 }
 .about {
   background-color: #06030378;
-    box-shadow: 0 0 20px 2px  #060303c2;
+  box-shadow: 0 0 20px 2px #060303c2;
   padding: 20px;
   border-radius: 12px;
   width: 40%;
+}
+.btn {
+  background-color: #222222;
+  color: #f5f5f5;
+  padding: 5px;
+  border: 1px solid white; 
+  border-radius: 12px;
+  transition: background-color 1s ease-in-out;
+  height:8%;
+  width:40%;
+}
+.txtwrapper{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%
+}
+.txtwrapper span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
 .start {
   background-color: #06030378;
@@ -61,7 +86,7 @@ select {
   border-radius: 8px;
   transition: background-color 1s ease-in-out;
 }
-select:hover{
+ select:hover, .btn:hover/* you can list different classes to keep code dry*/ {
   background-color: #333333;
 }
 .displaybox {
@@ -78,86 +103,83 @@ ul {
   font-size: large;
 }
 /*to get the wording to transition smoothly when dropdown changes*/
-.letterfade{
-  transition: opacity .8s ease-in-out;
+.letterfade {
+  transition: opacity 0.8s ease-in-out;
 }
-.visible{
-  opacity:1;
+.visible {
+  opacity: 1;
 }
-.hidden{
-  opacity:0;
+.hidden {
+  opacity: 0;
 }
-
 
 /*add transitions to each one*/
 .-bg {
-  box-shadow: 0 0 20px 2px  #060303c2;
+  box-shadow: 0 0 20px 2px #060303c2;
 }
 .shame-bg {
   box-shadow: 0 0 20px 2px #800000;
 }
 .guilt-bg {
-   box-shadow: 0 0 20px 2px #8B0000;
+  box-shadow: 0 0 20px 2px #8b0000;
 }
 .apathy-bg {
-   box-shadow: 0 0 20px 2px #A52A2A;
+  box-shadow: 0 0 20px 2px #a52a2a;
 }
 .grief-bg {
-   box-shadow: 0 0 20px 2px #B22222;
+  box-shadow: 0 0 20px 2px #b22222;
 }
 .fear-bg {
- box-shadow: 0 0 20px 2px #DC143C;
+  box-shadow: 0 0 20px 2px #dc143c;
 }
 .desire-bg {
-   box-shadow: 0 0 20px 2px #FF4500;
+  box-shadow: 0 0 20px 2px #ff4500;
 }
 .anger-bg {
-   box-shadow: 0 0 20px 2px #FF6347;
+  box-shadow: 0 0 20px 2px #ff6347;
 }
 .pride-bg {
-   box-shadow: 0 0 20px 2px #FF8C00;
+  box-shadow: 0 0 20px 2px #ff8c00;
 }
 .courage-bg {
-   box-shadow: 0 0 20px 2px #FFA500;
-
+  box-shadow: 0 0 20px 2px #ffa500;
 }
-  .neutrality-bg {
-   box-shadow: 0 0 20px 2px #FFD700;
-  }
+.neutrality-bg {
+  box-shadow: 0 0 20px 2px #ffd700;
+}
 
 .willingness-bg {
-   box-shadow: 0 0 20px 2px #FFFF00;
+  box-shadow: 0 0 20px 2px #ffff00;
 }
 .acceptance-bg {
-   box-shadow: 0 0 20px 2px #ADFF2F;
+  box-shadow: 0 0 20px 2px #adff2f;
 }
 .reason-bg {
-   box-shadow: 0 0 20px 2px #00FF7F;
+  box-shadow: 0 0 20px 2px #00ff7f;
 }
 .love-bg {
-   box-shadow: 0 0 20px 2px #00FA9A;
+  box-shadow: 0 0 20px 2px #00fa9a;
 }
 .joy-bg {
-   box-shadow: 0 0 20px 2px #00CED1;
+  box-shadow: 0 0 20px 2px #00ced1;
 }
 .peace-bg {
-   box-shadow: 0 0 20px 2px #1E90FF;
+  box-shadow: 0 0 20px 2px #1e90ff;
 }
 .enlightenment-bg {
-   box-shadow: 0 0 20px 2px #9370DB;
+  box-shadow: 0 0 20px 2px #9370db;
 }
-.fade{
-    transition: box-shadow .8s ease-in-out;
-
+.fade {
+  transition: box-shadow 0.8s ease-in-out;
 }
 
-h1 {
+h1 h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-bottom: 0;
 }
 p {
   font-family: Arial, Helvetica, sans-serif;
 }
-.move{
+.move {
   text-align: left;
 }
