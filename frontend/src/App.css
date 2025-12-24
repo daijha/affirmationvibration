@@ -38,6 +38,8 @@ body,
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
+    /* border:4px solid yellow; */
+
 }
 .about {
   background-color: #06030378;
@@ -183,3 +185,48 @@ p {
 .move {
   text-align: left;
 }
+
+
+@media screen and (max-width: 480px) {
+body,
+#root,
+.app {
+font-size: 14px;
+display:block;
+min-height:98vh;
+width:98vw;
+margin: 0;
+padding:0;
+}
+.title{
+  padding:0;
+  font-size: 1rem;
+}
+
+.page{
+display:block;
+  border:4px solid white;
+  width:100%;
+
+
+}
+.pageInner{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+    border:4px solid green;
+   min-height:100vh;
+}
+.about{
+width:100%;
+height:20%;
+  border:4px solid pink;
+
+}
+.start{
+width:100%;
+  border:4px solid navajowhite;
+
+}
+ }
