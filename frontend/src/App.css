@@ -25,7 +25,7 @@ body,
   );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 .title {
@@ -205,28 +205,23 @@ padding:0;
 
 .page{
 display:block;
-  border:4px solid white;
-  width:100%;
-
-
+  width:98%;
+  height:auto;
 }
 .pageInner{
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-    border:4px solid green;
-   min-height:100vh;
 }
 .about{
 width:100%;
 height:20%;
-  border:4px solid pink;
-
+margin-bottom: 25px;
+}
+.btn{
+  height:50px;
 }
 .start{
 width:100%;
-  border:4px solid navajowhite;
-
 }
  }
