@@ -16,4 +16,6 @@ A simple, calming application that generates affirmations designed to help users
 - Node + Express (small REST-inspired API)
 
 ## Where to View the Project
-Coming soon
+https://affirmationvibration-1.onrender.com/
+
+enjoy! :D
