@@ -112,7 +112,7 @@ router.get("/anger", (req, res) => {
       "I choose justice over vengeance.",
       "I am powerful and grounded.",
       "I release what no longer serves.",
-      "I am not my anger—I am its alchemist.",
+      "I am not my anger. I am its alchemist.",
       "I rise with integrity.",
     ],
   });
@@ -129,7 +129,7 @@ router.get("/pride", (req, res) => {
       "I lead with heart, not ego.",
       "I am secure in my truth.",
       "I grow through vulnerability.",
-      "I am not above or below—I am.",
+      "I am not above or below. I am.",
       "I choose connection over superiority.",
     ],
   });

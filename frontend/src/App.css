@@ -106,7 +106,7 @@ ul {
 }
 /*to get the wording to transition smoothly when dropdown changes*/
 .letterfade {
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .visible {
   opacity: 1;
@@ -172,7 +172,7 @@ ul {
   box-shadow: 0 0 20px 2px #9370db;
 }
 .fade {
-  transition: box-shadow 0.8s ease-in-out;
+  transition: box-shadow 2.5s ease-in-out;
 }
 
 h1 h2 {

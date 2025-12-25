@@ -16,10 +16,17 @@ function Affirmations({ mood, setMood }) {
     // fetching the affs from the backend
     async function getAffs(mood) {
       try {
-        const response = await fetch(`http://localhost:3000/api/${mood}`);
+        const response = await fetch(
+          `https://affirmationvibration.onrender.com/api/${mood}`
+        );
         const data = await response.json();
         console.log(data);
-        setAffs(data);
+        setIsVisible(false);
+
+        setTimeout(() => {
+          setAffs(data);
+          setIsVisible(true);
+        }, 1000);
       } catch (error) {
         console.log(error);
       }
@@ -39,15 +46,17 @@ function Affirmations({ mood, setMood }) {
       <h2 className={isVisible ? "letterfade visible" : "letterfade hidden"}>
         {mood ? `Affirmations for ${mood}` : "How are you feeling?"}
       </h2>
-      
+
       <select
-        onChange={(e) => {
-          setIsVisible(false);
-          setTimeout(() => {
-            setMood(e.target.value);
-            setIsVisible(true);
-          }, 800);
-        }}
+        value={mood}
+        onChange={(e) => setMood(e.target.value)}
+        // onChange={(e) => {
+        //   setIsVisible(false);
+        //   setTimeout(() => {
+        //     setMood(e.target.value);
+        //     setIsVisible(true);
+        //   }, 1000);
+        // updated the timeout after render }}
       >
         {/* when the dropdown is selected react gives a event object. inside that object is a property called target.value which gives the value selected. onchange sets the selection when it changes*/}
         <option value="">select your mood here</option>{" "}
@@ -73,10 +82,12 @@ function Affirmations({ mood, setMood }) {
       {/*reminder: select is the tag 4 dropdown */}
       <div className="displaybox">
         {affs.affirmations ? (
-          <ul className={isVisible ? "letterfade visible" : "letterfade hidden"}>
-            {affs.affirmations.map((item) => (
-              <li key={item} >{item}</li>
-            ))}
+          <ul className={isVisible ? "letterfade visible" : "letterfade hidden"} >
+            {affs.affirmations ? (
+              affs.affirmations.map((item) => <li key={item}>{item}</li>)
+            ) : (
+              <li className="placeholder">Affirmations will appear here...</li>
+            )}
           </ul>
         ) : (
           <p className="move">
