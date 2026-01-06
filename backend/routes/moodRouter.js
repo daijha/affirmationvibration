@@ -251,6 +251,11 @@ router.get("/joy", (req, res) => {
     ],
   });
 });
+
+router.head("/joy", (req, res) => {
+  res.sendStatus(200);
+});
+
 router.get("/peace", (req, res) => {
   res.json({
     affirmations: [
